@@ -4,19 +4,35 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { useState } from "react";
 import { CheckBox } from 'react-native-elements';
 
-export function Tarefas(){
-  const [isChecked, setIsChecked] = useState(false);
+type Props={
+  tarefa: string,
+  onRemove: ()=>void,
+  updateContador: (count: number) => void;
+}
 
+export function Tarefas({tarefa,onRemove, updateContador}: Props){
+
+  const [isChecked, setIsChecked] = useState(false);
+  
+  function mudarValor(){
+    setIsChecked(!isChecked);
+    updateContador(isChecked ? -1 : 1); 
+  }
+  
   return(
   <View style={styles.container}>
     <CheckBox
         checked={isChecked}  
-        containerStyle={styles.checkBox} 
+        checkedIcon='dot-circle-o' 
+        uncheckedIcon='circle-o'
+        uncheckedColor='#4EA8DE'
+        checkedColor='#8284FA'
+        onPress={mudarValor}
             
     />
     
-    <Text style={styles.text}>Interger urna interdum massa libero auctorneque turpis turpis semper.</Text>
-    <Icon style={styles.icon}name="delete-forever-outline" />
+    <Text style={styles.text}>{tarefa}</Text>
+    <Icon style={styles.icon}name="delete-forever-outline" onPress={onRemove}/>
     <View>
     
     </View>

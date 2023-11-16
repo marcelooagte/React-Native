@@ -1,4 +1,4 @@
-import { Bold } from 'lucide-react';
+import { AlignCenter, Bold } from 'lucide-react';
 import { StyleSheet} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 export const styles = StyleSheet.create({
@@ -61,11 +61,38 @@ export const styles = StyleSheet.create({
     color: '#FFF',
     fontSize: 20,    
   },
+  icon2:{
+    color: "#6b6b6b",
+      fontSize: 60, 
+      marginLeft:10
+  },
   form:{
     marginTop:36,
     width:'100%',
     flexDirection:'row',
     marginBottom:42,
+  },
+  alert:{
+      color: "#6b6b6b",
+      fontSize: 20, 
+      marginLeft:10,
+      textAlign: 'center',      
+  },
+  alert2:{
+    color: "#808080",
+    marginTop:10,
+  },
+  result:{
+    flexDirection:'row',
+    justifyContent: 'space-between', 
+  },
+  criadas:{
+      color: '#4EA8DE',
+      fontSize: 20, 
+  },
+  concluidas:{
+      color: '#8284FA',
+      fontSize: 20, 
   }
 
 });
