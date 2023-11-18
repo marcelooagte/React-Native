@@ -1,13 +1,13 @@
 import { View, Text } from "react-native";
 import { styles } from "./styles";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CheckBox } from 'react-native-elements';
 
 type Props={
   tarefa: string,
   onRemove: ()=>void,
-  updateContador: (count: number) => void;
+  updateContador: ( isChecked: boolean) => void;
 }
 
 export function Tarefas({tarefa,onRemove, updateContador}: Props){
@@ -16,7 +16,7 @@ export function Tarefas({tarefa,onRemove, updateContador}: Props){
   
   function mudarValor(){
     setIsChecked(!isChecked);
-    updateContador(isChecked ? -1 : 1); 
+    updateContador(!isChecked); 
   }
   
   return(
