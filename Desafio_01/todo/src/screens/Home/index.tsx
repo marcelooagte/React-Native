@@ -83,10 +83,21 @@ export function Home() {
           <Icon name="plus-circle-outline" style={styles.icon} />
         </TouchableOpacity>
       </View>
-      <View>
+
+      <View >
         <View style={styles.result}>
-          <Text style={styles.criadas}>Criadas :{tarefasCriadas}</Text>
-          <Text style={styles.concluidas}>Concluídas: {tarefasConcluidas}</Text>
+          <Text style={styles.criadas}>
+             Criadas : 
+                < View style={styles.tamanhoCirculo}>
+                    <Text style={styles.criadasEConcluidas}>   {tarefasCriadas}   </Text>
+                </View>
+           </Text>
+          <Text style={styles.concluidas}>
+            Concluídas:
+            < View style={styles.tamanhoCirculo}>
+                   <Text style={styles.criadasEConcluidas}>   {tarefasConcluidas}   </Text>
+            </View>
+           </Text>
         </View>
 
         <FlatList

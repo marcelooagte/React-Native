@@ -48,6 +48,8 @@ export const styles = StyleSheet.create({
     color:"#FFF",
     padding:16,
     fontSize:16,   
+    borderWidth: 1,  
+      borderColor: '#1C1C1C',
   },
   button:{
     width:56,
@@ -84,15 +86,40 @@ export const styles = StyleSheet.create({
   },
   result:{
     flexDirection:'row',
-    justifyContent: 'space-between', 
+    justifyContent: 'space-between',
+    
+    alignItems:'center',
+    textAlign: 'center',
   },
+  
   criadas:{
       color: '#4EA8DE',
-      fontSize: 20, 
+      fontSize: 15,       
   },
   concluidas:{
       color: '#8284FA',
-      fontSize: 20, 
+      fontSize: 15, 
+  },
+  criadasEConcluidas: {
+    backgroundColor: "#1F1E25",
+    borderRadius: 30,
+    color: "#FFF",
+    padding: 1,  
+    fontSize: 14,
+    textAlign:'center',
+  },
+  tamanhoCirculo:{
+    flexDirection: 'row',
+    alignItems: 'center',
+    textAlign:'center',
+     flex: 1,
+     height:17,
+     width:50,
+     
+     
+     
+      
+     
   }
 
 });

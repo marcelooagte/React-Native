@@ -7,7 +7,10 @@ export const styles = StyleSheet.create({
       borderRadius:5,      
       padding:5,
       alignItems: 'center',
-      marginBottom: 10
+      marginBottom: 10,
+      borderWidth: 1,  
+      borderColor: '#363636',
+
     },
     text:{
       color: '#FFF',
@@ -21,6 +24,10 @@ export const styles = StyleSheet.create({
     },
     checkBox:{      
       color: '#4EA8DE',          
-    }
+    },
+    textoRiscado: {
+      textDecorationLine: 'line-through',
+      color: "#6b6b6b",
+    },
   
   });

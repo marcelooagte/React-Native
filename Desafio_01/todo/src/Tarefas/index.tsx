@@ -31,7 +31,7 @@ export function Tarefas({tarefa,onRemove, updateContador}: Props){
             
     />
     
-    <Text style={styles.text}>{tarefa}</Text>
+    <Text style={[styles.text, isChecked ? styles.textoRiscado : null]}>{tarefa}</Text>
     <Icon style={styles.icon}name="delete-forever-outline" onPress={onRemove}/>
     <View>
     
