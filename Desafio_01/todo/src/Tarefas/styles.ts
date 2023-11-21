@@ -10,6 +10,7 @@ export const styles = StyleSheet.create({
       marginBottom: 10,
       borderWidth: 1,  
       borderColor: '#363636',
+      
 
     },
     text:{

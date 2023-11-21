@@ -8,12 +8,16 @@ export const styles = StyleSheet.create({
     backgroundColor: '#131016',    
     
    },
+   
+
   title:{
     marginTop:36,
     width:'100%',
     flexDirection:'row',
     alignItems:'center',
-    justifyContent:'center'
+    justifyContent:'center',
+    
+
 
   },
   image:{
@@ -28,6 +32,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'column',
     marginRight:25,
+    marginTop:30,
   },
   to:{
     color: '#4EA8DE',    
@@ -40,6 +45,7 @@ export const styles = StyleSheet.create({
     fontWeight:"bold",    
   },
   input:{
+    
     flex:1,
     marginRight:12,
     backgroundColor: "#1F1E25",
@@ -73,6 +79,7 @@ export const styles = StyleSheet.create({
     width:'100%',
     flexDirection:'row',
     marginBottom:42,
+    
   },
   alert:{
       color: "#6b6b6b",
@@ -90,6 +97,11 @@ export const styles = StyleSheet.create({
     
     alignItems:'center',
     textAlign: 'center',
+    
+    
+  },
+  margin:{
+    marginTop:20
   },
   
   criadas:{
@@ -115,11 +127,13 @@ export const styles = StyleSheet.create({
      flex: 1,
      height:17,
      width:50,
-     
-     
-     
-      
-     
-  }
+    },
+    line: {
+      borderBottomWidth: 1,
+      borderBottomColor: '#6b6b6b',
+      width: '100%', // Ajuste conforme necessário
+      marginTop: 10,
+      marginBottom: 10,
+    },
 
 });

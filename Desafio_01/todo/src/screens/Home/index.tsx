@@ -66,6 +66,7 @@ export function Home() {
 
   return (
     <View style={styles.container}>
+     
       <View style={styles.title}>
         <Image source={require('../../img/rocket.png')} style={styles.image} />
         <Text style={styles.to}>to</Text>
@@ -83,7 +84,7 @@ export function Home() {
           <Icon name="plus-circle-outline" style={styles.icon} />
         </TouchableOpacity>
       </View>
-
+ 
       <View >
         <View style={styles.result}>
           <Text style={styles.criadas}>
@@ -99,8 +100,11 @@ export function Home() {
             </View>
            </Text>
         </View>
+        <View style={styles.margin}>
 
+        </View>
         <FlatList
+          
           data={textoCompleto}
           keyExtractor={(_, index) => index.toString()}
           renderItem={({ item, index }) => (
@@ -114,13 +118,14 @@ export function Home() {
           showsVerticalScrollIndicator={false}
           ListEmptyComponent={() => (
             <View style={styles.containerIcons}>
+              <View style={styles.line}></View>
               <Icon name="clipboard-text-outline" style={styles.icon2} />
               <Text style={styles.alert}>Você ainda não tem tarefas cadastradas</Text>
               <Text style={styles.alert2}>Crie tarefas e organize seus itens a fazer</Text>
             </View>
           )}
         />
-      </View>
-    </View>
+      </View>      
+  </View>
   );
 }
