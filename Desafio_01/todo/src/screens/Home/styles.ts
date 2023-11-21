@@ -131,7 +131,7 @@ export const styles = StyleSheet.create({
     line: {
       borderBottomWidth: 1,
       borderBottomColor: '#6b6b6b',
-      width: '100%', // Ajuste conforme necessário
+      width: '100%', 
       marginTop: 10,
       marginBottom: 10,
     },
