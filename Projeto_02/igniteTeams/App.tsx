@@ -1,4 +1,4 @@
-import { NewGroup } from '@screens/NewGroup';
+import { Groups } from '@screens/Groups';
 import { StatusBar } from 'react-native';
 import {useFonts, Roboto_400Regular, Roboto_700Bold} from '@expo-google-fonts/roboto';
 
@@ -17,7 +17,7 @@ export default function App() {
       backgroundColor='transparent'
       translucent
     />
-     {fontsLoaded ? <NewGroup /> : <Loading/>}
+     {fontsLoaded ? <Groups /> : <Loading/>}
    </ThemeProvider>
   );
 }
