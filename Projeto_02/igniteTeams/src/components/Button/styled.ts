@@ -17,11 +17,8 @@ export const Container = styled(TouchableOpacity)<Props>`
     align-items:center; 
 `;
 export const Title = styled.Text`
-${({theme}) => css`
+${({ theme }) => css`
     font-size:   ${theme.FONT_SIZE.MD}px;
     color:       ${theme.COLORS.WHITE};
     font-family: ${theme.FONT_FAMILY.BOLD};
-`};
-
-
-`;
+`}`;

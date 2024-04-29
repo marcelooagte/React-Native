@@ -14,15 +14,14 @@ export function Home(){
     setParticipantsName('');
   }
   function handleParticipantRemove(name: string){
-    
     Alert.alert("Remover",`Voce deseja remover o participante ${name}?`,[
       {
         text: 'Sim',
-        onPress:() => setParticipants(prevState => prevState.filter(participants => participants !== name) ) 
+        onPress:() => setParticipants(prevState => prevState.filter(participants => participants !== name) ), 
       },
     {
       text:'Nao',
-      style:"cancel"
+      style:"cancel",
     }
     ])
   }
