@@ -6,11 +6,22 @@ import { Highlight } from '@components/Highlight';
 import { GroupCard } from '@components/GroupCard';
 import { ListEmpty } from '@components/ListEmpty';
 import { Button } from '@components/Button';
+import { useNavigation } from '@react-navigation/native';
+
 
 import { Container} from './styles';
 
+
+
 export function Groups() {
-  const [groups,setGroups] = useState<string[]>(['Galera da Rocket','Amigos','Família']);
+  const [groups,setGroups] = useState<string[]>(['Grupo','Amigos','Família','Trabalho']);
+  
+const navigation = useNavigation();
+
+  function handleNewGroup(){
+    navigation.navigate('new')
+  }
+
   return (
     <Container>
       <Header />  
@@ -28,9 +39,11 @@ export function Groups() {
             )}
             contentContainerStyle={groups.length === 0 && {flex:1}}
             ListEmptyComponent={()=><ListEmpty message="Que tal cadastrar a primeira turma"/>}
+            showsVerticalScrollIndicator={false}
       />
       <Button 
-       title="Criar nova turma"       
+       title="Criar nova turma"  
+       onPress={handleNewGroup}     
       />
     </Container>
   );
