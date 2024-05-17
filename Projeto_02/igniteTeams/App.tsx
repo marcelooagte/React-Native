@@ -20,8 +20,9 @@ export default function App() {
       translucent
     />
      
-     {fontsLoaded ? <Routes /> : <Loading/>}
+     <Routes />
    </ThemeProvider>
   );
 }
 
+//{fontsLoaded ? <Routes /> : <Loading/>}
