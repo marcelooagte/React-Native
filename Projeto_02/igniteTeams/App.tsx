@@ -21,6 +21,10 @@ export default function App() {
     />
      
      {fontsLoaded ? <Routes /> : <Loading/>}
+    
    </ThemeProvider>
   );
 }
+
+
+     
